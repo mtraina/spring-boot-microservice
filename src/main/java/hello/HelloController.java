@@ -23,6 +23,12 @@ public class HelloController {
         return "Greetings from Spring Boot to " + name + "!";
     }
 
+    @RequestMapping("/api/user")
+    @ResponseBody
+    public String user() {
+        return "I'm the user " + name + "!";
+    }
+
     public static void main(String[] args) throws Exception {
         SpringApplication.run(HelloController.class, args);
     }
